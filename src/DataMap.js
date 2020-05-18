@@ -38,6 +38,20 @@ const DataMap = {
     },
     about: {
         resume: '/',
+    },
+    skill: {
+        frontend: {
+            icon: require('./images/frontend.svg'),
+            list: ['Flutter', 'Kotlin/Java', 'React', 'Javascript', 'HTML/CSS']
+        },
+        backend: {
+            icon: require('./images/backend.svg'),
+            list: ['Firebase', 'Node.js', 'MongoDB', 'Flask/Python', 'SQLite']
+        },
+        others: {
+            icon: require('./images/others.svg'),
+            list: ['Git', 'Dev Ops', 'UX/UI Design', 'Adobe XD', 'Adobe Photoshop']
+        },
     }
 }
 
