@@ -62,7 +62,6 @@ const myStyles = makeStyles((theme) => ({
                 textDecoration: 'none',
                 color: DataMap.color.darkBlueContrast2
             },
-            marginTop: '0.5em'
         }
     },
 }))
@@ -83,7 +82,7 @@ export default function Showcase() {
                 <p>I'm a full-stack developer specialised in frontend and backend development for scalable android apps. I write about android development on <a href={DataMap.socialMedia.medium} target='_blank'>medium</a>. Want to know how I may help your project? Check out my
                 <a href='/projects'> projects </a>
                 and
-                <a href='/projects'> resume </a>
+                <a href={DataMap.about.resume}> resume </a>
                 .
                 </p>
                 <Button1

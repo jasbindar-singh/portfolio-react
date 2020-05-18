@@ -5,6 +5,8 @@ const DataMap = {
         darkBlueContrast: '#0f5b99',
         darkBlueContrast2: '#0c4778',
         lightBlue: '#41a4f5',
+        lightGray: '#3f3f3f',
+        lightGray2: '#646464',
         white: '#f2fbff'
     },
     routes: [
@@ -32,10 +34,10 @@ const DataMap = {
         facebook: 'https://www.facebook.com/ibtesam.ansari070',
         instagram: 'https://www.instagram.com/ibtesam070',
         medium: 'https://medium.com/@ibtesamansari070',
-        stackoverflow: 'https://stackoverflow.com/users/9681181/ibtesam-ansari'
+        stackoverflow: 'https://stackoverflow.com/users/9681181/ibtesam-ansari',
     },
-    images: {
-        profile: ''
+    about: {
+        resume: '/',
     }
 }
 
