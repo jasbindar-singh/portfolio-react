@@ -57,7 +57,8 @@ const myStyles = makeStyles((theme) => ({
                 textAlign: 'center'
             },
             color: DataMap.color.white,
-            lineHeight: '1.8em',
+            lineHeight: '1.6em',
+            marginTop:'0.3em',
             '& a': {
                 textDecoration: 'none',
                 color: DataMap.color.darkBlueContrast2
