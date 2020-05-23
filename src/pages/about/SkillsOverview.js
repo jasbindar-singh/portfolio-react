@@ -36,7 +36,7 @@ const myStyles = makeStyles((theme) => ({
     skillList: {
         [theme.breakpoints.down('sm')]: {
             flexDirection: 'column',
-            width: '80%',
+            alignItems: 'center',
         },
         display: 'flex',
         justifyContent: 'center',
