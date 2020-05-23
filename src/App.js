@@ -2,6 +2,7 @@ import React from 'react'
 import NavigationBar from './components/NavigationBar/NavigationBar'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
+import './App.css'
 import About from './pages/about/About'
 import Projects from './pages/projects/Projects'
 import Publications from './pages/publications/Publications'

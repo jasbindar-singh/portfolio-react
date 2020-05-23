@@ -12,8 +12,8 @@ export default function Button1(props) {
             color: DataMap.color.white,
             backgroundColor: DataMap.color.darkBlue2,
             fontSize: 16,
-            fontWeight: 'bolder',
-            padding: '0.4em 1.4em',
+            fontWeight: props.fontWeight ? props.fontWeight : 'bolder',
+            padding: props.isFooter ? '0.2em 1em' : '0.4em 1.4em',
             transition: 'background-color 0.4s ease',
             '&:hover': {
                 backgroundColor: DataMap.color.darkBlueContrast

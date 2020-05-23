@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'Roboto';
+    src: local('Roboto'), url(./fonts/Roboto/Roboto-Regular.ttf) format('truetype');
+}
+  
+@font-face {
+      font-family: 'Roboto';
+      font-weight: 300;
+      src: local('Roboto'), url(./fonts/Roboto/Roboto-Light.ttf) format('truetype');
+}
+  
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 500;
+    src: local('Roboto'), url(./fonts/Roboto/Roboto-Medium.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Roboto';
+    font-weight: 700;
+    src: local('Roboto'), url(./fonts/Roboto/Roboto-Bold.ttf) format('truetype');
+}
+
+
+
+@font-face {
+    font-family: 'Baloo Bhaina 2';
+    src: local('Baloo Bhaina 2'), url(./fonts/Baloo/BalooBhaina2-Regular.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Baloo Bhaina 2';
+    font-weight: 500;
+    src: local('Baloo Bhaina 2'), url(./fonts/Baloo/BalooBhaina2-Medium.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'Baloo Bhaina 2';
+    font-weight: 600;
+    src: local('Baloo Bhaina 2'), url(./fonts/Baloo/BalooBhaina2-SemiBold.ttf) format('truetype');
+}

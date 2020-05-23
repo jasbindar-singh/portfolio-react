@@ -13,6 +13,7 @@ export default function Button2(props) {
             backgroundColor: DataMap.color.lightBlue,
             fontSize: 16,
             fontWeight: 500,
+            padding: '0.2em 0.5em',
             transition: 'background-color 0.4s ease',
             '&:hover': {
                 backgroundColor: DataMap.color.lightBlueContrast

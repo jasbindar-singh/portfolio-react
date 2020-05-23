@@ -57,32 +57,35 @@ const DataMap = {
             list: ['Git', 'Dev Ops', 'UX/UI Design', 'Adobe XD', 'Adobe Photoshop']
         },
     },
-    project: [
-        {
-            name: 'Empress Music',
-            category: 'Mobile App Development',
-            techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
-            description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
-            image: require('./images/empress_music.jpeg'),
-            themeColor: '#ff7531'
-        },
-        {
-            name: 'Quizzo',
-            category: 'Mobile App Development',
-            techStack: ['Kotlin', 'Android', 'Nodejs', 'MongoDB'],
-            description: "A multiplayer quiz game on various different topics. Compete with your friends to get the highest score.",
-            image: require('./images/quizzo.jpeg'),
-            themeColor: '#0a71c6'
-        },
-        {
-            name: 'News App',
-            category: 'Mobile App Development',
-            techStack: ['Flutter', 'Android', 'Adobe XD'],
-            description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
-            image: require('./images/news_app.webp'),
-            themeColor: '#e03538'
-        }
-    ],
+    project: {
+        techStack: ['All', 'Flutter', 'Kotlin', 'Firebase', 'Node.js', 'MongoDB'],
+        projectList: [
+            {
+                name: 'Empress Music',
+                category: 'Mobile App Development',
+                techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
+                description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
+                image: require('./images/empress_music.jpeg'),
+                themeColor: '#ff7531'
+            },
+            {
+                name: 'Quizzo',
+                category: 'Mobile App Development',
+                techStack: ['Kotlin', 'Android', 'Node.js', 'Firebase', 'MongoDB'],
+                description: "A multiplayer quiz game on various different topics. Compete with your friends to get the highest score.",
+                image: require('./images/quizzo.jpeg'),
+                themeColor: '#0a71c6'
+            },
+            {
+                name: 'News App',
+                category: 'Mobile App Development',
+                techStack: ['Flutter', 'Android', 'Adobe XD'],
+                description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
+                image: require('./images/news_app.webp'),
+                themeColor: '#e03538'
+            }
+        ]
+    },
     post: [
         {
             title: 'Realtime Chat App - One-to-One using Flutter, Socket.io & Node.js ',

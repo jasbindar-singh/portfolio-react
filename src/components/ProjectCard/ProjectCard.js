@@ -6,7 +6,7 @@ import { useTheme } from 'styled-components'
 
 
 export default function ProjectCard(props) {
-    const project = DataMap.project[props.index]
+    const project = DataMap.project.projectList[props.index]
     const [hover, setHover] = useState(false)
     const myStyles = makeStyles((theme) => ({
         projectCard: {
@@ -66,6 +66,7 @@ export default function ProjectCard(props) {
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
+
             '& a': {
                 textDecoration: 'none',
                 color: DataMap.color.lightGray2,
@@ -76,7 +77,7 @@ export default function ProjectCard(props) {
             },
             '& ul': {
                 display: 'grid',
-                gridTemplateColumns: 'repeat(4,1fr)',
+                gridTemplateColumns: '1fr 1fr 1fr 1fr',
                 width: '90%',
                 margin: '0em 0em',
                 padding: '0em 0em',
