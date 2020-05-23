@@ -5,8 +5,11 @@ const DataMap = {
         darkBlueContrast: '#0f5b99',
         darkBlueContrast2: '#0c4778',
         lightBlue: '#41a4f5',
+        lightBlueContrast: '#2e77b3',
         lightGray: '#3f3f3f',
         lightGray2: '#646464',
+        lightGray3: '#999999',
+        blueGray: '#465263',
         white: '#f2fbff'
     },
     routes: [
@@ -38,6 +41,7 @@ const DataMap = {
     },
     about: {
         resume: '/',
+        image: require('./images/profile.jpg')
     },
     skill: {
         frontend: {
@@ -59,21 +63,40 @@ const DataMap = {
             category: 'Mobile App Development',
             techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
             description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
-            image: require('./images/empress_music.jpeg')
+            image: require('./images/empress_music.jpeg'),
+            themeColor: '#ff7531'
         },
         {
             name: 'Quizzo',
             category: 'Mobile App Development',
             techStack: ['Kotlin', 'Android', 'Nodejs', 'MongoDB'],
             description: "A multiplayer quiz game on various different topics. Compete with your friends to get the highest score.",
-            image: require('./images/quizzo.jpeg')
+            image: require('./images/quizzo.jpeg'),
+            themeColor: '#0a71c6'
         },
         {
             name: 'News App',
             category: 'Mobile App Development',
             techStack: ['Flutter', 'Android', 'Adobe XD'],
             description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
-            image: require('./images/news_app.webp')
+            image: require('./images/news_app.webp'),
+            themeColor: '#e03538'
+        }
+    ],
+    post: [
+        {
+            title: 'Realtime Chat App - One-to-One using Flutter, Socket.io & Node.js ',
+            date: 'December 20, 2019',
+            description: 'Introduction to rooms in socketio and using them to create individual chatrooms. This can be used to implement single user chat.',
+            image: require('./images/realtime_chat.png'),
+            link: 'https://medium.com/flutter-community/realtime-chat-app-one-to-one-using-flutter-socket-io-node-js-acd4152c6a00'
+        },
+        {
+            title: 'Realtime Chat App — Flutter, Node.js & Socket.io',
+            date: 'December 20, 2019',
+            description: 'In this blog we will see how to make a realtime chat app using Node.js as the backend and Flutter as the frontend. We will use sockets to communicate between devices.',
+            image: require('./images/realtime_chat.png'),
+            link: 'https://medium.com/flutter-community/realtime-chat-app-flutter-node-js-socket-io-e298cd27fb06'
         }
     ]
 }

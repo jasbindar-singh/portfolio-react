@@ -1,35 +1,125 @@
-import React from 'react'
-import { Paper, makeStyles, Avatar, Box } from '@material-ui/core'
+import React, { useState } from 'react'
+import { Paper, makeStyles, Avatar, Box, Chip } from '@material-ui/core'
 
 import DataMap from '../../DataMap'
+import { useTheme } from 'styled-components'
 
-let project
-
-const myStyles = makeStyles((theme) => ({
-    containerBox: {
-        display: 'flex',
-        flexDirection: 'column',
-        minWidth: '25%'
-    },
-    projectImageBox: {
-        height: '13em',
-        backgroundImage: project.image,
-    },
-    projectDescriptionBox: {
-        
-    }
-}))
 
 export default function ProjectCard(props) {
-    project = DataMap.project[props.index]
+    const project = DataMap.project[props.index]
+    const [hover, setHover] = useState(false)
+    const myStyles = makeStyles((theme) => ({
+        projectCard: {
+            [theme.breakpoints.down('sm')]: {
+                marginBottom: '3em',
+                minWidth: '20em'
+            },
+            display: 'flex',
+            flexDirection: 'column',
+            minWidth: '25%',
+        },
+        projectImageBox: {
+            height: '13em',
+            display: 'flex',
+            position: 'relative',
+            justifyContent: 'center',
+            alignItems: 'center',
+            overflow: 'hidden',
+            '& img': {
+                height: '100%',
+                width: '100%',
+                filter: hover ? 'brightness(100%)' : 'brightness(90%)',
+            },
+            '& h1': {
+                position: 'absolute',
+                fontSize: '38px',
+                fontFamily: "'Baloo Bhaina 2'",
+                fontWeight: 500,
+                color: DataMap.color.white,
+                display: hover ? 'none' : 'block'
+            }
+        },
+        projectOverlay: {
+            position: 'absolute',
+            backgroundColor: project.themeColor,
+            height: '100%',
+            width: '100%',
+            color: DataMap.color.white,
+            opacity: '0.9',
+            padding: '1.5em 1.5em',
+            top: hover ? '0%' : '100%',
+            textOverflow: 'ellipsis',
+            transition: 'top 0.5s ease',
+            '& h4': {
+                padding: '0em 0em',
+                margin: '1em 1em',
+                fontSize: 18
+            },
+            '& p': {
+                padding: '0em 0em',
+                margin: '1em 1em',
+                lineHeight: '1.5em'
+            },
+        },
+        projectDescriptionBox: {
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            '& a': {
+                textDecoration: 'none',
+                color: DataMap.color.lightGray2,
+                fontWeight: 500,
+                cursor: 'pointer',
+                fontSize: 22,
+                margin: '0.5em 0em'
+            },
+            '& ul': {
+                display: 'grid',
+                gridTemplateColumns: 'repeat(4,1fr)',
+                width: '90%',
+                margin: '0em 0em',
+                padding: '0em 0em',
+                rowGap: '0.4em',
+                columnGap: '0em',
+                marginBottom: '1em',
+                listStyle: 'none',
+            },
+
+        },
+        techChip: {
+            backgroundColor: DataMap.color.blueGray,
+            color: DataMap.color.white,
+        }
+    }))
     const classes = myStyles()
     return (
-        <Paper className={classes.containerBox} elevation={3}>
-            <div className={classes.projectImageBox}>
-
+        <Paper className={classes.projectCard} elevation={3}>
+            <div
+                className={classes.projectImageBox}
+                onMouseEnter={() => { setHover(true) }}
+                onMouseLeave={() => { setHover(false) }}>
+                <img src={project.image} />
+                <h1>{project.name}</h1>
+                <div className={classes.projectOverlay}>
+                    <h4>{project.name}</h4>
+                    <p>{project.description}</p>
+                </div>
             </div>
             <Box className={classes.projectDescriptionBox}>
-
+                <a>{project.category}</a>
+                <ul>
+                    {
+                        project.techStack.map(tech => {
+                            return <li>
+                                <Chip
+                                    label={tech}
+                                    size='small'
+                                    className={classes.techChip} />
+                            </li>
+                        })
+                    }
+                </ul>
             </Box>
         </Paper>
     )

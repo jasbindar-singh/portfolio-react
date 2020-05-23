@@ -14,13 +14,15 @@ const myStyles = makeStyles((theme) => ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        justifyContent: 'center',
+        justifyContent: 'start',
         minWidth: '25%',
+        position: 'relative',
         paddingBottom: '2em',
         '& h3': {
             textTransform: 'capitalize',
             color: DataMap.color.lightGray,
             fontWeight: 500,
+            marginTop: '2.5em',
             fontSize: 20,
             marginBottom: '0em',
         }
@@ -29,6 +31,8 @@ const myStyles = makeStyles((theme) => ({
         height: '3.5em',
         width: '3.5em',
         backgroundColor: DataMap.color.lightBlue,
+        position: 'absolute',
+        top: 0,
         marginTop: '-1.5em',
         '& img': {
             height: '60%',

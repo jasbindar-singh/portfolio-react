@@ -40,9 +40,9 @@ const myStyles = makeStyles((theme) => ({
         },
         display: 'flex',
         justifyContent: 'center',
-        alignItems: 'center',
+        alignItems: 'stretch',
         marginTop: '5em',
-        marginBottom: '3em',
+        marginBottom: '2em',
         justifyContent: 'space-evenly',
         width: '100%'
     }

@@ -58,7 +58,7 @@ const myStyles = makeStyles((theme) => ({
             },
             color: DataMap.color.white,
             lineHeight: '1.6em',
-            marginTop:'0.3em',
+            marginTop: '0.3em',
             '& a': {
                 textDecoration: 'none',
                 color: DataMap.color.darkBlueContrast2
@@ -76,7 +76,7 @@ export default function Showcase() {
             <Avatar
                 className={classes.profileImage}
                 variant='rounded'
-                src={require('../../images/profile.jpg')} />
+                src={DataMap.about.image} />
             <Box className={classes.aboutBox}>
                 <h4>Hello, my name is</h4>
                 <h1>Ibtesam Ansari</h1>
