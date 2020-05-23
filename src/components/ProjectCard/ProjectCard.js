@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
-import { Paper, makeStyles, Avatar, Box, Chip } from '@material-ui/core'
+import { Paper, makeStyles, Box, Chip } from '@material-ui/core'
 
 import DataMap from '../../DataMap'
-import { useTheme } from 'styled-components'
 
 
 export default function ProjectCard(props) {
@@ -12,11 +11,13 @@ export default function ProjectCard(props) {
         projectCard: {
             [theme.breakpoints.down('sm')]: {
                 marginBottom: '3em',
-                minWidth: '20em'
+                minWidth: '18em',
+                height: 'auto'
             },
             display: 'flex',
             flexDirection: 'column',
             minWidth: '25%',
+            height: props.about ? 'auto' : '100%'
         },
         projectImageBox: {
             height: '13em',

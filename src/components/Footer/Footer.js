@@ -11,7 +11,7 @@ const myStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         width: '100%',
         flexDirection: 'column',
-        padding: '3em 0em',
+        padding: '2em 0em',
         backgroundColor: DataMap.color.lightBlue,
         '& h2': {
             fontSize: 28,

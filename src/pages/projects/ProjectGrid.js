@@ -17,6 +17,8 @@ const myStyles = makeStyles((theme) => ({
     },
     singleProjectCard: {
         maxWidth: '19em',
+        justifySelf: 'center',
+        width: '100%',
     }
 }))
 
@@ -42,7 +44,10 @@ export default function ProjectGrid(props) {
     const projects = getRelevantProjects(props.selected, DataMap.project.projectList)
     console.log(projects)
     return (
-        <Box display='flex' justifyContent='center' alignItems='center' margin='1em 0em 3em 0em'>
+        <Box
+            display='flex'
+            justifyContent='center'
+            margin='1em 0em 3em 0em'>
             <Box className={classes.projectGridContainer}>
                 {
                     projects.map((index) => {

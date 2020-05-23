@@ -40,9 +40,9 @@ export default function FeaturedProject() {
         <Box className={classes.featuredProjectContainer}>
             <h1>Featured Projects</h1>
             <Box className={classes.projectList}>
-                <ProjectCard index={0} />
-                <ProjectCard index={1} />
-                <ProjectCard index={2} />
+                <ProjectCard index={0} about />
+                <ProjectCard index={1} about />
+                <ProjectCard index={2} about />
             </Box>
             <Button2 buttonText='View all projects' onClick={() => { window.location = '/projects' }} />
         </Box>

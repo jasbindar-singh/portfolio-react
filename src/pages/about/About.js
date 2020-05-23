@@ -9,7 +9,7 @@ import Footer from '../../components/Footer/Footer'
 
 export default function About() {
     return (
-        <div>
+        <div style={{ position: 'relative' }}>
             <Showcase />
             <SkillsOverview />
             <FeaturedProject />

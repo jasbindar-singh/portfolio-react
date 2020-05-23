@@ -12,7 +12,7 @@ export default function BlogPost() {
             flexDirection: 'column',
             justifyContent: 'center',
             alignItems: 'center',
-            margin: '1em 0em 2em 0em',
+            margin: '1em 0em',
             '& h1': {
                 fontSize: 30,
                 color: DataMap.color.lightGray
