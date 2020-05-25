@@ -13,7 +13,7 @@ export default function App() {
     <Router>
       <NavigationBar />
       <Switch>
-        <Route path='/portfolio-react' exact>
+        <Route path='/' exact>
           <About />
         </Route>
         <Route path='/projects' exact>

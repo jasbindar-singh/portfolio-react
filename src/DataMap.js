@@ -17,7 +17,7 @@ const DataMap = {
     routes: [
         {
             name: 'ABOUT',
-            route: '/portfolio-react'
+            route: '/'
         },
         {
             name: 'PROJECTS',
