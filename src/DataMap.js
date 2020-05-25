@@ -10,7 +10,9 @@ const DataMap = {
         lightGray2: '#646464',
         lightGray3: '#999999',
         blueGray: '#465263',
-        white: '#f2fbff'
+        white: '#f2fbff',
+        green: '#28a745',
+        orange:'#ef8236'
     },
     routes: [
         {

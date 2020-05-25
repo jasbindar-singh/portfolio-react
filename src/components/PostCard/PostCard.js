@@ -13,7 +13,7 @@ export default function PostCard(props) {
         postCard: {
             [theme.breakpoints.down('sm')]: {
                 marginBottom: '3em',
-                minWidth: '20em'
+                minWidth: '19em'
             },
             display: 'flex',
             backgroundColor: 'white',

@@ -63,6 +63,7 @@ const myStyles = makeStyles((theme) => ({
                 marginRight: '0.7em',
                 borderRadius: 3,
                 transition: 'background-color 0.4s ease',
+                cursor: 'pointer',
                 '&:hover': {
                     backgroundColor: DataMap.color.darkBlueContrast,
                 }
@@ -100,7 +101,9 @@ export default function Showcase() {
                 <ul>
                     {
                         btnArr.map((item, index) => {
-                            return <li className={classes.pubAvatar}>
+                            return <li
+                                className={classes.pubAvatar}
+                                onClick={() => { window.open(item, '_blank') }}>
                                 {btnIcon[index]}
                             </li>
                         })
