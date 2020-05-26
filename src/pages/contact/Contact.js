@@ -34,7 +34,8 @@ const myStyles = makeStyles((theme) => ({
             margin: '1em 2em',
             '& a': {
                 textDecoration: 'none',
-                color: DataMap.color.lightBlue
+                color: DataMap.color.lightBlue,
+                cursor: 'pointer',
             }
         },
         '& h5': {
@@ -79,7 +80,7 @@ export default function Contact() {
                 <Avatar src={DataMap.about.image} className={classes.contactAvatar} />
                 <Paper className={classes.contactCard}>
                     <p>
-                        I'm currently taking on freelance work. If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my <a> projects </a> and my <a>resume</a>.
+                        I'm currently taking on freelance work. If you are interested in hiring me for your project please use the form below to get in touch. Want to know how I work and what I can offer? Check out my <a href='/projects'> projects </a> and my <a href={DataMap.about.resume} download>resume</a>.
                     </p>
                     <h5>You can also find me on the following channels </h5>
                     <ul className={classes.contactIconList}>
@@ -92,7 +93,7 @@ export default function Contact() {
                 </Paper>
                 <ContactForm />
             </div>
-            
+
         </div>
     )
 }

@@ -54,7 +54,7 @@ export default function SkillsOverview() {
         <Box className={classes.containerBox}>
             <h1>Skills Overview</h1>
             <p>I have 2 months of experience in building android applications for two different companies. Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my skills? </p>
-            <a href={DataMap.about.resume}>Check out my resume</a>
+            <a href={DataMap.about.resume} download>Check out my resume</a>
             <Box className={classes.skillList}>
                 <SkillCard skillName='frontend' />
                 <SkillCard skillName='backend' />

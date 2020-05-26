@@ -42,7 +42,7 @@ const DataMap = {
         stackoverflow: 'https://stackoverflow.com/users/9681181/ibtesam-ansari',
     },
     about: {
-        resume: '/',
+        resume: './file/IbtesamResume.pdf',
         image: require('./images/profile.jpg')
     },
     skill: {
@@ -68,7 +68,8 @@ const DataMap = {
                 techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
                 description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
                 image: require('./images/empress_music.jpeg'),
-                themeColor: '#ff7531'
+                themeColor: '#ff7531',
+                link:'https://github.com/ibtesam123/EmpressMusic'
             },
             {
                 name: 'Quizzo',
@@ -76,7 +77,8 @@ const DataMap = {
                 techStack: ['Kotlin', 'Android', 'Node.js', 'Firebase', 'MongoDB'],
                 description: "A multiplayer quiz game on various different topics. Compete with your friends to get the highest score.",
                 image: require('./images/quizzo.jpeg'),
-                themeColor: '#0a71c6'
+                themeColor: '#0a71c6',
+                link:'https://github.com/ibtesam123/Quizzo'
             },
             {
                 name: 'News App',
@@ -84,7 +86,8 @@ const DataMap = {
                 techStack: ['Flutter', 'Android', 'Adobe XD'],
                 description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
                 image: require('./images/news_app.webp'),
-                themeColor: '#e03538'
+                themeColor: '#e03538',
+                link:'https://github.com/ibtesam123/NewsAppRevamp'
             }
         ]
     },

@@ -109,7 +109,7 @@ export default function ProjectCard(props) {
                 </div>
             </div>
             <Box className={classes.projectDescriptionBox}>
-                <a>{project.category}</a>
+                <a href={project.link} target='_blank'>{project.category}</a>
                 <ul>
                     {
                         project.techStack.map(tech => {

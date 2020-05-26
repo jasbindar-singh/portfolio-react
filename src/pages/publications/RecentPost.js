@@ -19,9 +19,10 @@ const myStyles = makeStyles((theme) => ({
     recentPostDesc: {
         marginBottom: '1em',
         flex: 2,
-        padding: '0em 1em',
-        '& h3': {
+        padding: '1.5em 1em',
+        '& a': {
             fontSize: 20,
+            textDecoration: 'none',
             fontWeight: 500,
             color: DataMap.color.lightBlue,
         },
@@ -53,11 +54,11 @@ export default function RecentPost() {
                 <div style={{ maxHeight: '18em', flex: 3 }}>
                     <img src={post.image} style={{ height: '100%', width: '100%' }} />
                 </div>
+                <div className={classes.recentChip} >
+                    Recent
+                </div>
                 <div className={classes.recentPostDesc}>
-                    <div className={classes.recentChip} >
-                        Recent
-                    </div>
-                    <h3>{post.title}</h3>
+                    <a href={post.link} target='_blank'>{post.title}</a>
                     <p>{post.description}</p>
                     <Button2 buttonText="Read more" onClick={() => { window.open(post.link, '_blank') }} />
                 </div>
