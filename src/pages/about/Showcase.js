@@ -45,7 +45,7 @@ const myStyles = makeStyles((theme) => ({
         },
         '& h1': {
             [theme.breakpoints.down('sm')]: {
-                fontSize: 50,
+                fontSize: 45,
             },
             fontSize: 55,
             lineSpacing: '0.5em',
