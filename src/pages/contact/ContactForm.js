@@ -103,7 +103,11 @@ export default function ContactForm() {
     }))()
 
     return (
-        <form className={classes.contactFormContainer} name='contact' method='POST' data-nelify="true">
+        <form className={classes.contactFormContainer}
+            name='contact'
+            method='POST'
+            data-nelify="true"
+            action='/contact'>
             <h1>Get In Touch</h1>
             <div className={classes.nameEmailContainer}>
                 <TextField
