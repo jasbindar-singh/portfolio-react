@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Paper, makeStyles, Box, Chip } from '@material-ui/core'
 
 import DataMap from '../../DataMap'
+import DownloadSection from './DownloadSection'
 
 
 export default function ProjectCard(props) {
@@ -63,12 +64,14 @@ export default function ProjectCard(props) {
             },
         },
         projectDescriptionBox: {
+            position: 'relative',
             display: 'flex',
+            flexGrow: 1,
             flexDirection: 'column',
             alignItems: 'center',
             justifyContent: 'center',
 
-            '& a': {
+            '& h3': {
                 textDecoration: 'none',
                 color: DataMap.color.lightGray2,
                 fontWeight: 500,
@@ -80,7 +83,7 @@ export default function ProjectCard(props) {
                 display: 'grid',
                 gridTemplateColumns: '1fr 1fr 1fr 1fr',
                 width: '90%',
-                margin: '0em 0em',
+                margin: '0em 0em 10em 0em',
                 padding: '0em 0em',
                 rowGap: '0.4em',
                 columnGap: '0em',
@@ -109,7 +112,7 @@ export default function ProjectCard(props) {
                 </div>
             </div>
             <Box className={classes.projectDescriptionBox}>
-                <a href={project.link} target='_blank'>{project.category}</a>
+                <h3>{project.category}</h3>
                 <ul>
                     {
                         project.techStack.map(tech => {
@@ -122,6 +125,7 @@ export default function ProjectCard(props) {
                         })
                     }
                 </ul>
+                <DownloadSection code={project.code} link={project.link} />
             </Box>
         </Paper>
     )

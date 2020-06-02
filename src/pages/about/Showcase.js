@@ -83,7 +83,7 @@ export default function Showcase() {
                 <p>I'm a full-stack developer specialised in frontend and backend development for scalable android apps. I write about android development on <a href={DataMap.socialMedia.medium} target='_blank'>medium</a>. Want to know how I may help your project? Check out my
                 <a href='/projects'> projects </a>
                 and
-                <a href={DataMap.about.resume} download> resume </a>
+                <a href={DataMap.about.resume} target='_blank'> resume </a>
                 .
                 </p>
                 <Button1

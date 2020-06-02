@@ -10,9 +10,10 @@ const DataMap = {
         lightGray2: '#646464',
         lightGray3: '#999999',
         blueGray: '#465263',
+        blueGrayLight: '#e4e7ed',
         white: '#f2fbff',
         green: '#28a745',
-        orange:'#ef8236'
+        orange: '#ef8236'
     },
     routes: [
         {
@@ -69,7 +70,8 @@ const DataMap = {
                 description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
                 image: require('./images/empress_music.jpeg'),
                 themeColor: '#ff7531',
-                link:'https://github.com/ibtesam123/EmpressMusic'
+                code: 'https://github.com/ibtesam123/EmpressMusic',
+                // link: 'https://github.com/ibtesam123/EmpressMusic',
             },
             {
                 name: 'Quizzo',
@@ -78,7 +80,8 @@ const DataMap = {
                 description: "A multiplayer quiz game on various different topics. Compete with your friends to get the highest score.",
                 image: require('./images/quizzo.jpeg'),
                 themeColor: '#0a71c6',
-                link:'https://github.com/ibtesam123/Quizzo'
+                code: 'https://github.com/ibtesam123/Quizzo',
+                // link: 'https://github.com/ibtesam123/Quizzo',
             },
             {
                 name: 'News App',
@@ -87,7 +90,8 @@ const DataMap = {
                 description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
                 image: require('./images/news_app.webp'),
                 themeColor: '#e03538',
-                link:'https://github.com/ibtesam123/NewsAppRevamp'
+                code: 'https://github.com/ibtesam123/NewsAppRevamp',
+                link: 'https://play.google.com/store/apps/details?id=ibtesam.news&hl=en_IN',
             }
         ]
     },

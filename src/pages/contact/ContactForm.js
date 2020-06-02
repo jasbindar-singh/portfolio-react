@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
-import { makeStyles, TextField } from '@material-ui/core'
+import { makeStyles, TextField, Button } from '@material-ui/core'
+import { stringify } from 'query-string'
+
 
 
 import DataMap from '../../DataMap'
@@ -28,7 +30,7 @@ export default function ContactForm() {
                 fontSize: 28,
                 fontWeight: 500,
                 color: DataMap.color.lightGray,
-            }
+            },
         },
         nameEmailContainer: {
             [theme.breakpoints.down('sm')]: {
@@ -85,21 +87,29 @@ export default function ContactForm() {
                     borderColor: messageErr ? '#eb4034' : DataMap.color.darkBlue2,
                 },
             },
+        },
+        contactSubmitButton: {
+            textTransform: 'none',
+            color: DataMap.color.white,
+            backgroundColor: DataMap.color.lightBlue,
+            fontSize: 16,
+            fontWeight: 500,
+            padding: '0.2em 0.5em',
+            transition: 'background-color 0.4s ease',
+            '&:hover': {
+                backgroundColor: DataMap.color.lightBlueContrast
+            },
         }
     }))()
 
-    function formSubmitted() {
-        if (name === '' || email === '' || message === '' || nameErr || emailErr || messageErr)
-            return
-    }
-
     return (
-        <div className={classes.contactFormContainer}>
+        <form className={classes.contactFormContainer} name='contact' method='POST' data-nelify="true">
             <h1>Get In Touch</h1>
             <div className={classes.nameEmailContainer}>
                 <TextField
                     variant='outlined'
                     label='Name'
+                    name="name"
                     defaultValue={name}
                     error={nameErr}
                     className={classes.nameField}
@@ -115,6 +125,7 @@ export default function ContactForm() {
                 <TextField
                     variant='outlined'
                     label='Email'
+                    name="email"
                     defaultValue={email}
                     error={emailErr}
                     required
@@ -133,6 +144,7 @@ export default function ContactForm() {
                 label="Enter your message"
                 error={messageErr}
                 multiline
+                name="message"
                 defaultValue={message}
                 onChange={(e) => {
                     message = e.target.value
@@ -145,7 +157,7 @@ export default function ContactForm() {
                 rows={13}
                 variant='outlined'
             />
-            <Button1 buttonText='Send it' onClick={() => { formSubmitted() }} />
-        </div>
+            <Button className={classes.contactSubmitButton} type="submit" >Send it</Button>
+        </form>
     )
 }
