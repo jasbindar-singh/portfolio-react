@@ -106,8 +106,8 @@ export default function ContactForm() {
         <form className={classes.contactFormContainer}
             name='contact'
             method='POST'
-            data-nelify="true"
-            action='/contact'>
+            data-netlify="true" 
+            data-netlify-honeypot="bot-field">
             <h1>Get In Touch</h1>
             <div className={classes.nameEmailContainer}>
                 <TextField
@@ -161,6 +161,7 @@ export default function ContactForm() {
                 rows={13}
                 variant='outlined'
             />
+            <input type="hidden" name="form-name" value="contact" />
             <Button className={classes.contactSubmitButton} type="submit" >Send it</Button>
         </form>
     )
