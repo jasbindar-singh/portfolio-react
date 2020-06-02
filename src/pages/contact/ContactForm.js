@@ -8,9 +8,9 @@ import DataMap from '../../DataMap'
 import Button1 from '../../components/Button/Button2'
 
 export default function ContactForm() {
-    let name = ''
-    let email = ''
-    let message = ''
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [message, setMessage] = useState('')
     const [nameErr, setNameErr] = useState(false)
     const [emailErr, setEmailErr] = useState(false)
     const [messageErr, setMessageErr] = useState(false)
@@ -102,12 +102,28 @@ export default function ContactForm() {
         }
     }))()
 
+    const encode = (data) => {
+        return Object.keys(data)
+            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+            .join("&");
+    }
+
+    function handleSubmit(e) {
+
+        if (name === '' || email === '' || message === '' || nameErr || emailErr || messageErr)
+            return
+        fetch("/", {
+            method: "POST",
+            headers: { "Content-Type": "application/x-www-form-urlencoded" },
+            body: encode({ "form-name": "contact", "name": name, "email": email, "message": message })
+        })
+
+        e.preventDefault()
+    }
+
     return (
         <form className={classes.contactFormContainer}
-            name='contact'
-            method='POST'
-            data-netlify="true" 
-            data-netlify-honeypot="bot-field">
+            onSubmit={handleSubmit}>
             <h1>Get In Touch</h1>
             <div className={classes.nameEmailContainer}>
                 <TextField
@@ -119,7 +135,7 @@ export default function ContactForm() {
                     className={classes.nameField}
                     required
                     onChange={(e) => {
-                        name = e.target.value
+                        setName(e.target.value)
                         if (name === '')
                             setNameErr(true)
                         else
@@ -134,8 +150,8 @@ export default function ContactForm() {
                     error={emailErr}
                     required
                     onChange={(e) => {
-                        email = e.target.value
-                        if (email === '' || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
+                        setEmail(e.target.value)
+                        if (e.target.value === '' || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
                             setEmailErr(true)
                         else
                             setEmailErr(false)
@@ -151,7 +167,7 @@ export default function ContactForm() {
                 name="message"
                 defaultValue={message}
                 onChange={(e) => {
-                    message = e.target.value
+                    setMessage(e.target.value)
                     if (message === '')
                         setMessageErr(true)
                     else
