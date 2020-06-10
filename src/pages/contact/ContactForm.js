@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
-import { makeStyles, TextField, Button } from '@material-ui/core'
-import { stringify } from 'query-string'
-
-
+import { makeStyles, TextField, Button, Snackbar, Slide } from '@material-ui/core'
+import Alert from '@material-ui/lab/Alert'
+import firebase from '../../Firebase'
 
 import DataMap from '../../DataMap'
-import Button1 from '../../components/Button/Button2'
 
 export default function ContactForm() {
     const [name, setName] = useState('')
@@ -14,6 +12,7 @@ export default function ContactForm() {
     const [nameErr, setNameErr] = useState(false)
     const [emailErr, setEmailErr] = useState(false)
     const [messageErr, setMessageErr] = useState(false)
+    const [open, setOpen] = useState(false)
     const classes = makeStyles((theme) => ({
         contactFormContainer: {
             [theme.breakpoints.down('sm')]: {
@@ -102,23 +101,53 @@ export default function ContactForm() {
         }
     }))()
 
-    const encode = (data) => {
-        return Object.keys(data)
-            .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
-            .join("&");
-    }
+    let ref = firebase.firestore().collection('CONTACT')
 
     function handleSubmit(e) {
+        e.preventDefault()
+
+        if (name === '') {
+            setNameErr(true)
+            return
+        }
+        else
+            setNameErr(false)
+
+        if (e.target.value === '' || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)) {
+            setEmailErr(true)
+            return
+        }
+        else
+            setEmailErr(false)
+
+        if (message === '') {
+            setMessageErr(true)
+            return
+        }
+        else
+            setMessageErr(false)
+
 
         if (name === '' || email === '' || message === '' || nameErr || emailErr || messageErr)
             return
-        fetch("/", {
-            method: "POST",
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: encode({ "form-name": "contact", "name": name, "email": email, "message": message })
+
+
+
+        ref.add({
+            name: name,
+            email: email,
+            message: message
+        }).then((_) => {
+            setName('')
+            setEmail('')
+            setMessage('')
+            setNameErr(false)
+            setEmailErr(false)
+            setMessageErr(false)
+            setOpen(true)
         })
 
-        e.preventDefault()
+
     }
 
     return (
@@ -132,30 +161,20 @@ export default function ContactForm() {
                     name="name"
                     defaultValue={name}
                     error={nameErr}
+                    value={name}
                     className={classes.nameField}
                     required
-                    onChange={(e) => {
-                        setName(e.target.value)
-                        if (name === '')
-                            setNameErr(true)
-                        else
-                            setNameErr(false)
-                    }}
+                    onChange={(e) => setName(e.target.value)}
                     size='small' />
                 <TextField
                     variant='outlined'
                     label='Email'
                     name="email"
+                    value={email}
                     defaultValue={email}
                     error={emailErr}
                     required
-                    onChange={(e) => {
-                        setEmail(e.target.value)
-                        if (e.target.value === '' || !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))
-                            setEmailErr(true)
-                        else
-                            setEmailErr(false)
-                    }}
+                    onChange={(e) => setEmail(e.target.value)}
                     className={classes.emailField}
                     size='small' />
             </div>
@@ -164,21 +183,26 @@ export default function ContactForm() {
                 label="Enter your message"
                 error={messageErr}
                 multiline
+                required
+                value={message}
                 name="message"
                 defaultValue={message}
-                onChange={(e) => {
-                    setMessage(e.target.value)
-                    if (message === '')
-                        setMessageErr(true)
-                    else
-                        setMessageErr(false)
-                }}
+                onChange={(e) => setMessage(e.target.value)}
                 size="medium"
                 rows={13}
                 variant='outlined'
             />
-            <input type="hidden" name="form-name" value="contact" />
             <Button className={classes.contactSubmitButton} type="submit" >Send it</Button>
+            <Snackbar
+                open={open}
+                autoHideDuration={3000}
+                TransitionComponent={Slide}
+                key={Slide.name}
+                onClose={() => { setOpen(false) }}>
+                <Alert variant="filled" severity="success">
+                    Got it! I will get back to you soon.
+                </Alert>
+            </Snackbar>
         </form>
     )
 }

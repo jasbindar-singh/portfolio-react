@@ -29,6 +29,10 @@ const myStyles = makeStyles((theme) => ({
         margin: '1em 0em',
         width: '50%',
         '& p': {
+            [theme.breakpoints.down('sm')]: {
+                width: '80%',
+                textAlign:'center'
+            },
             lineHeight: '1.5em',
             color: DataMap.color.lightGray2,
             margin: '1em 2em',

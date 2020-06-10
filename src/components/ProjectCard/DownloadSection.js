@@ -9,7 +9,6 @@ const myStyles = makeStyles(() => ({
     downloadSectionContainer: {
         display: 'flex',
         justifySelf: 'end',
-        width: '100%',
         height: '100%',
         justifyContent: 'end',
     },
@@ -40,7 +39,7 @@ export default function DownloadSection(props) {
     return (
         <div className={classes.downloadSectionContainer}>
             {
-                props.link ? <div className={classes.downloadButton} onClick={() => window.open(props.link, '_blank')}>
+                props.googlePlay ? <div className={classes.downloadButton} onClick={() => window.open(props.link, '_blank')}>
                     <FontAwesomeIcon className={classes.downloadIcon} icon={faGooglePlay} />
                     Google Play
                 </div> : <div />

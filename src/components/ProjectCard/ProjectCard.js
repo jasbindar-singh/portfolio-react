@@ -75,7 +75,7 @@ export default function ProjectCard(props) {
                 textDecoration: 'none',
                 color: DataMap.color.lightGray2,
                 fontWeight: 500,
-                cursor: 'pointer',
+                cursor: 'default',
                 fontSize: 22,
                 margin: '0.5em 0em'
             },
@@ -95,7 +95,7 @@ export default function ProjectCard(props) {
         techChip: {
             backgroundColor: DataMap.color.blueGray,
             color: DataMap.color.white,
-        }
+        },
     }))
     const classes = myStyles()
     return (
@@ -125,7 +125,7 @@ export default function ProjectCard(props) {
                         })
                     }
                 </ul>
-                <DownloadSection code={project.code} link={project.link} />
+                <DownloadSection code={project.code} googlePlay={project.googlePlay} />
             </Box>
         </Paper>
     )

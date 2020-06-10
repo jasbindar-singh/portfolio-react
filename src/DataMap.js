@@ -71,7 +71,7 @@ const DataMap = {
                 image: require('./images/empress_music.jpeg'),
                 themeColor: '#ff7531',
                 code: 'https://github.com/ibtesam123/EmpressMusic',
-                // link: 'https://github.com/ibtesam123/EmpressMusic',
+                // googlePlay: 'https://github.com/ibtesam123/EmpressMusic',
             },
             {
                 name: 'Quizzo',
@@ -81,7 +81,7 @@ const DataMap = {
                 image: require('./images/quizzo.jpeg'),
                 themeColor: '#0a71c6',
                 code: 'https://github.com/ibtesam123/Quizzo',
-                // link: 'https://github.com/ibtesam123/Quizzo',
+                // googlePlay: 'https://github.com/ibtesam123/Quizzo',
             },
             {
                 name: 'News App',
@@ -91,7 +91,7 @@ const DataMap = {
                 image: require('./images/news_app.webp'),
                 themeColor: '#e03538',
                 code: 'https://github.com/ibtesam123/NewsAppRevamp',
-                link: 'https://play.google.com/store/apps/details?id=ibtesam.news&hl=en_IN',
+                // googlePlay: 'https://play.google.com/store/apps/details?id=ibtesam.news&hl=en_IN',
             }
         ]
     },
