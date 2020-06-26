@@ -84,14 +84,14 @@ const DataMap = {
                 // googlePlay: 'https://github.com/ibtesam123/Quizzo',
             },
             {
-                name: 'News App',
+                name: 'News Bucket',
                 category: 'Mobile App Development',
                 techStack: ['Flutter', 'Android', 'Adobe XD'],
                 description: "Get all the current news in one place. Read news on various different topics. Dark mode included.",
                 image: require('./images/news_app.webp'),
                 themeColor: '#e03538',
-                code: 'https://github.com/ibtesam123/NewsAppRevamp',
-                // googlePlay: 'https://play.google.com/store/apps/details?id=ibtesam.news&hl=en_IN',
+                code: 'https://github.com/ibtesam123/NewsBucket',
+                googlePlay: 'https://play.google.com/store/apps/details?id=news.bucket',
             }
         ]
     },
