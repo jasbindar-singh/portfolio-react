@@ -104,7 +104,7 @@ export default function ProjectCard(props) {
                 className={classes.projectImageBox}
                 onMouseEnter={() => { setHover(true) }}
                 onMouseLeave={() => { setHover(false) }}>
-                <img src={project.image} />
+                <img src={project.image} alt='Project Image'/>
                 <h1>{project.name}</h1>
                 <div className={classes.projectOverlay}>
                     <h4>{project.name}</h4>

@@ -39,7 +39,7 @@ export default function DownloadSection(props) {
     return (
         <div className={classes.downloadSectionContainer}>
             {
-                props.googlePlay ? <div className={classes.downloadButton} onClick={() => window.open(props.link, '_blank')}>
+                props.googlePlay ? <div className={classes.downloadButton} onClick={() => window.open(props.googlePlay, '_blank')}>
                     <FontAwesomeIcon className={classes.downloadIcon} icon={faGooglePlay} />
                     Google Play
                 </div> : <div />
