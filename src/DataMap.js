@@ -43,7 +43,7 @@ const DataMap = {
         stackoverflow: 'https://stackoverflow.com/users/9681181/ibtesam-ansari',
     },
     about: {
-        resume: 'https://drive.google.com/file/d/1NzegrahaOCcHB5XznLjwlD8bWpE8jNCk/view?usp=sharing',
+        resume: 'https://drive.google.com/file/d/1iI1JNg8ALv__izKKDlcQ5mVMMfIYyVB6/view?usp=sharing',
         image: require('./images/profile.jpg')
     },
     skill: {
