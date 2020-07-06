@@ -64,14 +64,14 @@ const DataMap = {
         techStack: ['All', 'Flutter', 'Kotlin', 'Firebase', 'Node.js', 'MongoDB'],
         projectList: [
             {
-                name: 'Empress Music',
+                name: 'Quotify',
                 category: 'Mobile App Development',
-                techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
-                description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
-                image: require('./images/empress_music.jpeg'),
-                themeColor: '#ff7531',
-                code: 'https://github.com/ibtesam123/EmpressMusic',
-                // googlePlay: 'https://github.com/ibtesam123/EmpressMusic',
+                techStack: ['Flutter', 'Android', 'Node.js', 'MongoDB'],
+                description: "Keep yourself motivated everyday with beautiful and inspiring quotes.",
+                image: require('./images/quotify.jpg'),
+                themeColor: '#c203fc',
+                // code: 'https://github.com/ibtesam123/EmpressMusic',
+                googlePlay: 'https://play.google.com/store/apps/details?id=quotify.app',
             },
             {
                 name: 'Quizzo',
@@ -92,7 +92,17 @@ const DataMap = {
                 themeColor: '#e03538',
                 code: 'https://github.com/ibtesam123/NewsBucket',
                 googlePlay: 'https://play.google.com/store/apps/details?id=news.bucket',
-            }
+            },
+            {
+                name: 'Empress Music',
+                category: 'Mobile App Development',
+                techStack: ['Flutter', 'Android', 'SQLite3', 'Adobe XD'],
+                description: "A music player made using Google's latest cross-platform framework - Flutter. Listen to all your favourite music. Plug in your headphones and enjoy!",
+                image: require('./images/empress_music.jpeg'),
+                themeColor: '#ff7531',
+                code: 'https://github.com/ibtesam123/EmpressMusic',
+                // googlePlay: 'https://github.com/ibtesam123/EmpressMusic',
+            },
         ]
     },
     post: [

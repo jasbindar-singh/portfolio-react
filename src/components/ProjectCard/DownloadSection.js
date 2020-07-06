@@ -45,11 +45,11 @@ export default function DownloadSection(props) {
                 </div> : <div />
             }
             {
-                <div className={classes.downloadButton} onClick={() => window.open(props.code, '_blank')}>
+                props.code ? <div className={classes.downloadButton} onClick={() => window.open(props.code, '_blank')}>
                     <FontAwesomeIcon className={classes.downloadIcon} icon={faGithub} />
                     Github
-                </div>
+                </div> : <div />
             }
-        </div>
+        </div >
     )
 }
