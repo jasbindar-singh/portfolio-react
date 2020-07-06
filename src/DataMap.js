@@ -70,7 +70,7 @@ const DataMap = {
                 description: "Keep yourself motivated everyday with beautiful and inspiring quotes.",
                 image: require('./images/quotify.jpg'),
                 themeColor: '#c203fc',
-                // code: 'https://github.com/ibtesam123/EmpressMusic',
+                code: 'https://github.com/ibtesam123/Quotify-App',
                 googlePlay: 'https://play.google.com/store/apps/details?id=quotify.app',
             },
             {
