@@ -17,8 +17,7 @@ const myStyles = makeStyles((theme) => ({
         justifyContent: 'center',
         backgroundColor: DataMap.color.lightBlue,
         width: '100%',
-        paddingTop: '3em',
-        paddingBottom: '2em',
+        padding: '3em 0'
     },
     profileImage: {
         height: '12em',

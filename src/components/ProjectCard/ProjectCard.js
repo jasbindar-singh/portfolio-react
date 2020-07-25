@@ -17,7 +17,8 @@ export default function ProjectCard(props) {
             },
             display: 'flex',
             flexDirection: 'column',
-            minWidth: '25%',
+            width: '25%',
+            minWidth: '20em',
             height: props.about ? 'auto' : '100%'
         },
         projectImageBox: {
@@ -95,6 +96,7 @@ export default function ProjectCard(props) {
         techChip: {
             backgroundColor: DataMap.color.blueGray,
             color: DataMap.color.white,
+            marginLeft: '10px'
         },
     }))
     const classes = myStyles()
@@ -113,7 +115,7 @@ export default function ProjectCard(props) {
             </div>
             <Box className={classes.projectDescriptionBox}>
                 <h3>{project.category}</h3>
-                <ul>
+                <ul style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
                     {
                         project.techStack.map(tech => {
                             return <li>
