@@ -53,7 +53,7 @@ export default function SkillsOverview() {
     return (
         <Box className={classes.containerBox}>
             <h1>Skills Overview</h1>
-            <p>I have 2+ years of experience in app development from personal projects and working for a startup. Below is a quick overview of my main technical skill sets and tools I use. Want to find out more about my skills? </p>
+            <p>I have been developing android apps for 2+ years. I have started working with Flutter framework recently. Below is a quick overview of my main technical skills set and tools I use. Want to find out more about my skills? </p>
             <a href={DataMap.about.resume} target='_blank'>Check out my resume</a>
             <Box className={classes.skillList}>
                 <SkillCard skillName='frontend' />

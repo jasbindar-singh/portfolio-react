@@ -80,7 +80,7 @@ export default function Showcase() {
             <Box className={classes.aboutBox}>
                 <h4>Hello, my name is</h4>
                 <h1>Ibtesam Ansari</h1>
-                <p>I'm a full-stack developer specialised in frontend and backend development for scalable android apps. I write about android development on <a href={DataMap.socialMedia.medium} target='_blank'>medium</a>. Want to know how I may help your project? Check out my
+                <p>I'm a full-stack developer interested in frontend and backend development for scalable android apps. I write about android development on <a href={DataMap.socialMedia.medium} target='_blank'>medium</a>. Want to know how I may help your project? Check out my
                 <a href='/projects'> projects </a>
                 and
                 <a href={DataMap.about.resume} target='_blank'> resume </a>

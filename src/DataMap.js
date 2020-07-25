@@ -43,7 +43,7 @@ const DataMap = {
         stackoverflow: 'https://stackoverflow.com/users/9681181/ibtesam-ansari',
     },
     about: {
-        resume: 'https://drive.google.com/file/d/1LIb06vxw_LcReDa60FTuDJKVYsTuzqxc/view?usp=sharing',
+        resume: 'https://firebasestorage.googleapis.com/v0/b/personal-b6d5b.appspot.com/o/Portfolio%2FIbtesamResume.pdf?alt=media&token=93b112bd-c10f-4da1-aac3-174a03960856',
         image: require('./images/profile.jpg')
     },
     skill: {
@@ -57,7 +57,7 @@ const DataMap = {
         },
         others: {
             icon: require('./images/others.svg'),
-            list: ['Git', 'Dev Ops', 'UX/UI Design', 'Adobe XD', 'Adobe Photoshop']
+            list: ['Git', 'UX/UI Design', 'Adobe XD','Figma']
         },
     },
     project: {

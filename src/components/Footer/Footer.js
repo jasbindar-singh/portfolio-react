@@ -48,7 +48,7 @@ export default function Footer() {
             <Avatar src={DataMap.about.image} className={classes.footerAvatar} />
             <h2>Interested in hiring me for your project?</h2>
             <p>
-                Looking for an experienced full-stack developer to build your mobile app or deploy your app to the playstore? To start an initial chat, just drop me an email at  <a href='mailto:ibtesamansari070@gmail.com?subject=Discuss a project' target='_blank'> ibtesamansari070@gmail.com </a>  or use  <a href='/contact'>  the form on the contact page  </a> .
+                Looking for a full-stack developer to build your mobile app or deploy your app to the playstore? To start an initial chat, just drop me an email at  <a href='mailto:ibtesamansari070@gmail.com?subject=Discuss a project' target='_blank'> ibtesamansari070@gmail.com </a>  or use  <a href='/contact'>  the form on the contact page  </a> .
             </p>
             <Button1 isFooter buttonText={"Let's Talk"} fontWeight={500} onClick={() => { window.location = '/contact' }} />
         </Box>
